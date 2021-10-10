@@ -14,7 +14,8 @@ nav {
   }
   h1 {
     margin-left: 2rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
+    color: $grey-text;
   }
   .nav-links {
     @include flex(space-around, center, row);
@@ -67,4 +68,47 @@ nav {
 .intro-text,
 .intro-images {
   flex: 1 1 40rem;
+}
+
+// Animation
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.5s;
+}
+#me {
+  animation: me 1s ease infinite alternate;
+  transform-origin: bottom;
+}
+#clock-arrow {
+  animation: clock 1.5s infinite linear;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes me {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
 }
