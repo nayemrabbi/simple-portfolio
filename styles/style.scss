@@ -16,8 +16,9 @@ $grey-text: #2c2c2c;
 
 @import "./global";
 @import "./intro";
+@import "./projects/";
 
-@media screen and (max-width: 1005px) {
+@media screen and (max-width: 1100px) {
   html {
     font-size: 50%;
   }
@@ -42,7 +43,16 @@ $grey-text: #2c2c2c;
   }
   .intro-social {
     @include flex(center, center, row);
-    margin: 2rem;
+    a {
+      margin: 2rem;
+    }
+  }
+  .travelly,
+  .elena {
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
   svg {
     width: 80%;

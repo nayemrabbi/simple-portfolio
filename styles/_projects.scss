@@ -1,0 +1,11 @@
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  @include flex(space-around, center, row);
+  flex-wrap: wrap;
+  h2 {
+    text-align: center;
+    margin: 5rem 0rem;
+  }
+}
