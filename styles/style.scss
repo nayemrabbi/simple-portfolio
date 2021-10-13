@@ -16,3 +16,47 @@ $grey-text: #2c2c2c;
 
 @import "./global";
 @import "./intro";
+
+@media screen and (max-width: 1005px) {
+  html {
+    font-size: 50%;
+  }
+  nav {
+    width: 100%;
+  }
+  .splash {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 60%;
+  }
+  .intro-text {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .intro-images {
+    text-align: center;
+  }
+  .intro-social {
+    @include flex(center, center, row);
+    margin: 2rem;
+  }
+  svg {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 662px) {
+  nav {
+    #logo {
+      @include flex(center, center, column);
+      flex: 1 1 20rem;
+    }
+    .nav-links {
+      flex: 1 1 60rem;
+      margin: 2rem 0rem;
+    }
+  }
+}
